@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+
+<div class="contenedorFormulario">
+    <div style="text-align: center;">
+        <table class="tabla_sorteo  animate__animated animate__flipInY">
+            <tbody style="align-content: center;">
+                <tr>
+                    <td style="background-color: orange;">
+                        {% if nuevaRecarga == "ok" %}
+                            <h1>EMPECEMOS</h1>
+                        {% else %}
+                            <h1>{{numero}}</h1>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% if nuevoSorteo == "ok" and nuevaRecarga == "no" %}
+                <tr>
+                    <td style="background-color: orange;">
+                        <h1>FIN DEL SORTEO</h1>
+                    </td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        
+    </div>
+    <form action="" method="POST" style="text-align: center">
+        {% csrf_token %}
+        {% if nuevoSorteo == "ok" %}
+            <input type="submit" class="sorteo" value="Nuevo Sorteo">
+        {% elif nuevoSorteo == "no" %}
+            <input type="submit" class="sorteo" value="NUMERO">
+        {% endif %}
+    </form>
+    <div>
+        {% if nuevoSorteo == "ok" %}
+        <label style="color: palegoldenrod;">Bollias restantes: <h3 style="color: palegoldenrod;">0</h3></label>
+        {% else %}
+        <label style="color: palegoldenrod;">Bollias restantes: <h3 style="color: palegoldenrod;">{{restan}}</h3></label>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

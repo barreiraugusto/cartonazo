@@ -1,0 +1,153 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <label><h1>{{nombre}}, ya estas participando!!</h1></label>
+                        <label><h1>Este es tu cartonazo, ¡¡SUERTE!!</h1></label>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Carton -->
+<section class="page-section cta" id="carton">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <div>
+                        <label><h2>Carton: {{Carton_bd}}</h2></label>
+                    </div>
+                    <table style="width: 100%; border-collapse: separate;">
+                        <tbody>
+                            <tr style="height: 30%;">
+                                {% if celda00 %}
+                                <td style="background-color:orange; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda00}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda10 %}
+                                <td style="background-color:orange; text-align: center; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda10}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda20 %}
+                                <td style="background-color:orange; text-align: center; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda20}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda30 %}
+                                <td style="background-color:orange; text-align: center; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda30}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda40 %}
+                                <td style="background-color:orange; text-align: center; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda40}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda50 %}
+                                <td style="background-color:orange; text-align: center; text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda50}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda60 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda60}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda70 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda70}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda80 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda80}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %}
+                            </tr>
+                            <tr style="height: 30%;">
+                                {% if celda01 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda01}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda11 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda11}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda21 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda21}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda31 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda31}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda41 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda41}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda51 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda51}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda61 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda61}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda71 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda71}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda81 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda81}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %}
+                            </tr>
+                            <tr style="height: 30%;">
+                                {% if celda02 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda02}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda12 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda12}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda22 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda22}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda32 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda32}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda42 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda42}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda52 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda52}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda62 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda62}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda72 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda72}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %} {% if celda82 %}
+                                <td style="background-color:orange; text-align: center;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;">
+                                    <h1>{{celda82}}</h1></td>
+                                {% else %}
+                                <td style="background-color:lightslategray;text-align: center; width: 10%; border-radius: 0.5rem; padding: 5px; border: hidden;"></td>{% endif %}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

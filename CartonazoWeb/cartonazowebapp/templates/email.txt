@@ -1,0 +1,30 @@
+{{nombre}}, YA ESTAS PARTICIPANDO!!
+Este es tu tu cartonazo, ¡¡SUERTE!!
+Carton: {{Carton_bd}}
+{{celda00}}
+{{celda10}}
+{{celda20}}
+{{celda30}}
+{{celda40}}
+{{celda50}}
+{{celda60}}
+{{celda70}}
+{{celda80}}
+{{celda01}}
+{{celda11}}
+{{celda21}}
+{{celda31}}
+{{celda41}}
+{{celda51}}
+{{celda61}}
+{{celda71}}
+{{celda81}}
+{{celda02}}
+{{celda12}}
+{{celda22}}
+{{celda32}}
+{{celda42}}
+{{celda52}}
+{{celda62}}
+{{celda72}}
+{{celda82}}
