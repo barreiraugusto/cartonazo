@@ -1,4 +1,5 @@
 from django.db import models
+from cartonazowebapp.models import Usuario
 
 # Create your models here.
 
@@ -18,6 +19,7 @@ class registoSorteo(models.Model):
 
 class Carton(models.Model):
     numero_carton = models.CharField("NumeroCarton", max_length=7)
+    participante = models.OneToOneField(Usuario, on_delete=models.CASCADE, null=False, blank=False)
     fila10 = models.CharField("fila10", max_length=2)
     fila11 = models.CharField("fila11", max_length=2)
     fila12 = models.CharField("fila12", max_length=2)

@@ -3,7 +3,7 @@ from random import shuffle
 import operator
 from sorteo.models import Carton
 
-def GenerarCarton():
+def GenerarCarton(participante):
 	numeros_carton = {}
 	numeros = []
 	celdas = []
@@ -81,6 +81,7 @@ def GenerarCarton():
 		IDcarton = int(ultimoID.numero_carton) + 1
 
 	nuevo_carton = Carton(numero_carton="{}".format(IDcarton),
+	participante = participante,
 	fila10=numeros_carton["celda{}".format(keys_fila0[0])],
 	fila11=numeros_carton["celda{}".format(keys_fila0[1])],
 	fila12=numeros_carton["celda{}".format(keys_fila0[2])],
