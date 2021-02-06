@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Formulario de descarga -->
+
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center ">
+            <h2 class="section-heading mb-4">
+              <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        {{ form }}
+                    </div>
+                    <div class="submit-card">
+                      <input type="submit" value="login" id="submit_descarga">
+                    </div>
+              </form>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

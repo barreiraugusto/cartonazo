@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from cartonazowebapp.forms import FormularioDescarga
+from django.shortcuts import render, redirect
+from cartonazowebapp.forms import FormularioDescarga, CustomUserForm
 from cartonazowebapp.models import Usuario
 from cartonazowebapp.generarcartones import GenerarCarton
 from django.core.mail import EmailMessage, EmailMultiAlternatives
@@ -10,9 +10,15 @@ import operator
 from sorteo.models import Carton
 from django.template.loader import get_template 
 from django.template import Context
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'home.html')
+
+@login_required
 def DescargaCarton(request):
 
     formulario_descarga = FormularioDescarga(request.POST)
@@ -77,3 +83,16 @@ def DescargaCarton(request):
 
     return render(request, "descarga.html", {"formulario_descarga":formulario_descarga})
 
+def registro_usuario(request):
+    data = {'form':CustomUserForm()}
+    if request.method == "POST":
+        formulario = CustomUserForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            username = formulario.cleaned_data['username']
+            password = formulario.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect(to='home')
+
+    return render(request, 'registration/registro.html', data)
