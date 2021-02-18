@@ -37,18 +37,27 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="descarga">Generar carton</a>
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">PRINCIPAL</a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="#">{{user.username}}</a>
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'descarga' %}">Generar carton</a>
         </li>
         <li>
-          <a class="nav-link text-uppercase text-expanded" href="{% url 'logout' %}">Cerrar</a>
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'controlar' %}">MI CARTON</a>
+        </li>           
+        <li>
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'logout' %}">CERRAR</a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="#">{{user.username}}</a>
         </li>
         {% else %}
         <li>
-          <a class="nav-link text-uppercase text-expanded" href="{% url 'registro_usuario' %}">Registrarse</a>
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'registro_usuario' %}">REGISTRARCE</a>
+        </li>
+        <li>
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'login' %}">ENTRAR</a>
         </li>
         {% endif %}
 
@@ -88,7 +97,7 @@
         <a href="sample.html" class="link">Aviso legal</a> ·
         <a href="sample.html" class="link">Cookies</a>
   </p>
-      <p class="m-0 mbt1">&copy; Cartonazo 2020</p>
+      <p class="m-0 mbt1">&copy; Cartonazo 2021</p>
     </div>
 </footer>
 

@@ -13,28 +13,7 @@
               <form action="" method="POST">
                     {% csrf_token %}
                     <div class="row">
-                      <label>Nombre:</label>
-                      {{formulario_descarga.nombre}}
-                    </div>
-                    <div class="row">
-                      <label>Apellido:</label>
-                      {{formulario_descarga.apellido}}
-                    </div>
-                    <div class="row">
-                      <label>Direccion:</label>
-                      {{formulario_descarga.direccion}}
-                    </div>
-                    <div class="row">
-                      <label>DNI:</label>
-                      {{formulario_descarga.documento}}
-                    </div>
-                    <div class="row">
-                      <label>E-mail:</label>
-                      {{formulario_descarga.email}}
-                    </div>
-                    <div class="row">
-                      <label>Tel:</label>
-                      {{formulario_descarga.telefono}}
+                      {{formulario_descarga}}
                     </div>
                     <div class="submit-card">
                       <input type="submit" value="GENERAR" id="submit_descarga">

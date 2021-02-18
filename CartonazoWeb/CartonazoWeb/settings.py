@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = '/descarga'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cartonazowebapp',
     'sorteo',
+    'usuario',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "barreiraugusto@gmail.com"
 EMAIL_HOST_PASSWORD = "GALLO.22"
+
+
+AUTH_USER_MODEL = 'usuario.Usuario'

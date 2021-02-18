@@ -79,30 +79,14 @@ def GenerarCarton(participante):
 	else:
 		ultimoID = Carton.objects.latest()
 		IDcarton = int(ultimoID.numero_carton) + 1
-
 	nuevo_carton = Carton(numero_carton="{}".format(IDcarton),
 	participante = participante,
-	fila10=numeros_carton["celda{}".format(keys_fila0[0])],
-	fila11=numeros_carton["celda{}".format(keys_fila0[1])],
-	fila12=numeros_carton["celda{}".format(keys_fila0[2])],
-	fila13=numeros_carton["celda{}".format(keys_fila0[3])],
-	fila14=numeros_carton["celda{}".format(keys_fila0[4])],
-	fila20=numeros_carton["celda{}".format(keys_fila1[0])],
-	fila21=numeros_carton["celda{}".format(keys_fila1[1])],
-	fila22=numeros_carton["celda{}".format(keys_fila1[2])],
-	fila23=numeros_carton["celda{}".format(keys_fila1[3])],
-	fila24=numeros_carton["celda{}".format(keys_fila1[4])],
-	fila30=numeros_carton["celda{}".format(keys_fila2[0])],
-	fila31=numeros_carton["celda{}".format(keys_fila2[1])],
-	fila32=numeros_carton["celda{}".format(keys_fila2[2])],
-	fila33=numeros_carton["celda{}".format(keys_fila2[3])],
-	fila34=numeros_carton["celda{}".format(keys_fila2[4])],
-	)
+	fila1=fila0,
+	fila2=fila1,
+	fila3=fila2)
 	nuevo_carton.save()
-
 	carton["fila00"] = fila0
 	carton["fila01"] = fila1
 	carton["fila02"] = fila2
-	
 
 	return carton
