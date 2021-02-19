@@ -2,13 +2,12 @@
 
 
 <div class="contenedorFormulario">
-    <div style="text-align: center;">
-        <table class="tabla_sorteo  animate__animated animate__flipInY">
+        <table class="tabla_sorteo table animate__animated animate__flipInY">
             <tbody style="align-content: center;">
                 <tr>
-                    <td style="background-color: orange;">
+                    <td style="background-color: orange; text-align: center;">
                         {% if nuevaRecarga == "ok" %}
-                            <h1>EMPECEMOS</h1>
+                            <h3>EMPECEMOS</h3>
                         {% else %}
                             <h1>{{numero}}</h1>
                         {% endif %}
@@ -16,15 +15,14 @@
                 </tr>
                 {% if nuevoSorteo == "ok" and nuevaRecarga == "no" %}
                 <tr>
-                    <td style="background-color: orange;">
-                        <h1>FIN DEL SORTEO</h1>
+                    <td style="background-color: orange; text-align: center;">
+                        <h3>FIN DEL SORTEO</h3>
                     </td>
                 </tr>
                 {% endif %}
             </tbody>
         </table>
         
-    </div>
     <form action="" method="POST" style="text-align: center">
         {% csrf_token %}
         {% if nuevoSorteo == "ok" %}

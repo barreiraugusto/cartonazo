@@ -16,21 +16,24 @@
      <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
      
 
-    <!-- Styles -->
+    <!-- Styles  -->
     <link href="{% static '/css/gestion.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Celular  -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    
 </head>
 
 <body>
 
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      
+    <h1 class="site-heading text-center text-white d-none d-lg-block">    
         <span class="site-heading-lower">CARTONAZO</span>
-      </h1>
+    </h1>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
   <div class="container">
-    <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="home.html">CARTONAZO</a>
+    <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'home' %}">CARTONAZO</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -43,20 +46,20 @@
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{% url 'descarga' %}">Generar carton</a>
         </li>
-        <li>
+        <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{% url 'controlar' %}">MI CARTON</a>
         </li>           
-        <li>
+        <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{% url 'logout' %}">CERRAR</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="#">{{user.username}}</a>
         </li>
         {% else %}
-        <li>
+        <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{% url 'registro_usuario' %}">REGISTRARCE</a>
         </li>
-        <li>
+        <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{% url 'login' %}">ENTRAR</a>
         </li>
         {% endif %}
@@ -91,12 +94,12 @@
             <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
           </span>
         </a>
-    </p>
+      </p>
       <p class="m-0 mbt">
         <a href="sample.html" class="link">Política de privacidad</a> ·
         <a href="sample.html" class="link">Aviso legal</a> ·
         <a href="sample.html" class="link">Cookies</a>
-  </p>
+      </p>
       <p class="m-0 mbt1">&copy; Cartonazo 2021</p>
     </div>
 </footer>
