@@ -7,7 +7,7 @@ import os
 from random import randint
 from random import shuffle
 import operator
-from sorteo.models import Carton
+from sorteo.models import Carton, Numeros_sorteados
 from django.template.loader import get_template 
 from django.template import Context
 from django.contrib.auth.decorators import login_required
@@ -70,9 +70,29 @@ def registro_usuario(request):
 
 @login_required
 def controlar_numeros(request):
+    v1 = False
+    v2 = False
+    v3 = False
+    v4 = False
+    v5 = False
+    v6 = False
+    v7 = False
+    v8 = False
+    v9 = False
+    v10 = False
+    v11 = False
+    v12 = False
+    v13 = False
+    v14 = False
+    v15 = False
     cartones = Carton.objects.all()
     usuario = request.user.pk
     carton = Carton.objects.filter(participante=usuario)
+    num_sorteo = Numeros_sorteados.objects.all()
+    lista_num_sorteo = []
+    for num in num_sorteo:
+        lista_num_sorteo.append(num.numero)
+    
     if len(carton) == 0:
         return render(request, 'error.html', {"mensaje_error":"NO TIENEN CARTON GENERALO!!"})
     content = {"nombre":request.user.username, "email":request.user.email}
@@ -94,32 +114,62 @@ def controlar_numeros(request):
             num5 = fila1[4].split(":")[1].strip('\' ')
 
             fila2 = fila2.strip('{ }').split(",")
-            celda12 = fila2[0].split(":")[0].strip('\' ')
-            num12 = fila2[0].split(":")[1].strip('\' ')
-            celda22 = fila2[1].split(":")[0].strip('\' ')
-            num22 = fila2[1].split(":")[1].strip('\' ')
-            celda32 = fila2[2].split(":")[0].strip('\' ')
-            num32 = fila2[2].split(":")[1].strip('\' ')
-            celda42 = fila2[3].split(":")[0].strip('\' ')
-            num42 = fila2[3].split(":")[1].strip('\' ')
-            celda52 = fila2[4].split(":")[0].strip('\' ')
-            num52 = fila2[4].split(":")[1].strip('\' ')
+            celda6 = fila2[0].split(":")[0].strip('\' ')
+            num6 = fila2[0].split(":")[1].strip('\' ')
+            celda7 = fila2[1].split(":")[0].strip('\' ')
+            num7 = fila2[1].split(":")[1].strip('\' ')
+            celda8 = fila2[2].split(":")[0].strip('\' ')
+            num8 = fila2[2].split(":")[1].strip('\' ')
+            celda9 = fila2[3].split(":")[0].strip('\' ')
+            num9 = fila2[3].split(":")[1].strip('\' ')
+            celda10 = fila2[4].split(":")[0].strip('\' ')
+            num10 = fila2[4].split(":")[1].strip('\' ')
 
             fila3 = fila3.strip('{ }').split(",")
-            celda13 = fila3[0].split(":")[0].strip('\' ')
-            num13 = fila3[0].split(":")[1].strip('\' ')
-            celda23 = fila3[1].split(":")[0].strip('\' ')
-            num23 = fila3[1].split(":")[1].strip('\' ')
-            celda33 = fila3[2].split(":")[0].strip('\' ')
-            num33 = fila3[2].split(":")[1].strip('\' ')
-            celda43 = fila3[3].split(":")[0].strip('\' ')
-            num43 = fila3[3].split(":")[1].strip('\' ')
-            celda53 = fila3[4].split(":")[0].strip('\' ')
-            num53 = fila3[4].split(":")[1].strip('\' ')
+            celda11 = fila3[0].split(":")[0].strip('\' ')
+            num11 = fila3[0].split(":")[1].strip('\' ')
+            celda12 = fila3[1].split(":")[0].strip('\' ')
+            num12 = fila3[1].split(":")[1].strip('\' ')
+            celda13 = fila3[2].split(":")[0].strip('\' ')
+            num13 = fila3[2].split(":")[1].strip('\' ')
+            celda14 = fila3[3].split(":")[0].strip('\' ')
+            num14 = fila3[3].split(":")[1].strip('\' ')
+            celda15 = fila3[4].split(":")[0].strip('\' ')
+            num15 = fila3[4].split(":")[1].strip('\' ')
+            if num1 in lista_num_sorteo:
+                v1 = True
+            if num2 in lista_num_sorteo:
+                v2 = True
+            if num3 in lista_num_sorteo:
+                v3 = True
+            if num4 in lista_num_sorteo:
+                v4 = True
+            if num5 in lista_num_sorteo:
+                v5 = True
+            if num6 in lista_num_sorteo:
+                v6 = True
+            if num7 in lista_num_sorteo:
+                v7 = True
+            if num8 in lista_num_sorteo:
+                v8 = True
+            if num9 in lista_num_sorteo:
+                v9 = True
+            if num10 in lista_num_sorteo:
+                v10 = True
+            if num11 in lista_num_sorteo:
+                v11 = True
+            if num12 in lista_num_sorteo:
+                v12 = True
+            if num13 in lista_num_sorteo:
+                v13 = True
+            if num14 in lista_num_sorteo:
+                v14 = True
+            if num15 in lista_num_sorteo:
+                v15 = True
 
-            dic1 = {celda1:num1,celda2:num2,celda3:num3,celda4:num4,celda5:num5}
-            dic2 = {celda12:num12,celda22:num22,celda32:num32,celda42:num42,celda52:num52}
-            dic3 = {celda13:num13,celda23:num23,celda33:num33,celda43:num43,celda53:num53}
+            dic1 = {celda1:(num1,v1),celda2:(num2,v2),celda3:(num3,v3),celda4:(num4,v4),celda5:(num5,v5)}
+            dic2 = {celda6:(num6,v6),celda7:(num7,v7),celda8:(num8,v8),celda9:(num9,v9),celda10:(num10,v10)}
+            dic3 = {celda11:(num11,v11),celda12:(num12,v12),celda13:(num13,v13),celda14:(num14,v14),celda15:(num15,v15)}
             content.update(dic1)
             content.update(dic2)
             content.update(dic3)

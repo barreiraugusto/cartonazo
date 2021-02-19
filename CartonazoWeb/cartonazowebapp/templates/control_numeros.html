@@ -35,120 +35,280 @@
                         <tbody>
                             <tr>
                                 {% if celda00 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda00}}</td>
+                                    {% if celda00.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda00.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda00.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda10 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda10}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+                                
+                                
+                                {% if celda10 %}
+                                    {% if celda10.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda10.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda10.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda20 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda20}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+
+                                {% if celda20 %}
+                                    {% if celda20.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda20.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda20.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda30 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda30}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda30 %}
+                                    {% if celda30.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda30.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda30.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda40 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda40}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda40 %}
+                                    {% if celda40.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda40.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda40.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda50 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda50}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda50 %}
+                                    {% if celda50.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda50.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda50.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda60 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda60}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda60 %}
+                                    {% if celda60.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda60.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda60.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda70 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda70}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %} 
+
+                                {% if celda70 %}
+                                    {% if celda70.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda70.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda70.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda80 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda80}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda80 %}
+                                    {% if celda80.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda80.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda80.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %}
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
                             </tr>
                             <tr>
                                 {% if celda01 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda01}}</td>
+                                    {% if celda01.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda01.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda01.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda11 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda11}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %} 
+
+                                {% if celda11 %}
+                                    {% if celda11.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda11.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda11.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda21 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda21}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda21 %}
+                                    {% if celda21.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda21.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda21.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda31 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda31}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda31 %}
+                                    {% if celda31.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda31.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda31.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda41 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda41}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda41 %}
+                                    {% if celda41.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda41.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda41.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda51 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda51}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda51 %}
+                                    {% if celda51.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda51.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda51.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda61 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda61}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda61 %}
+                                    {% if celda61.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda61.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda61.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda71 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda71}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda71 %}
+                                    {% if celda71.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda71.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda71.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda81 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda81}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda81 %}
+                                    {% if celda81.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda81.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda81.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %}
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
                             </tr>
                             <tr>
                                 {% if celda02 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda02}}</td>
+                                    {% if celda02.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda02.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda02.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda12 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda12}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %} 
+
+                                {% if celda12 %}
+                                    {% if celda12.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda12.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda12.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda22 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda22}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda22 %}
+                                    {% if celda22.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda22.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda22.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda32 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda32}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda32 %}
+                                    {% if celda32.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda32.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda32.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda42 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda42}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %} 
+
+                                {% if celda42 %}
+                                    {% if celda42.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda42.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda42.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda52 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda52}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %} 
+
+                                {% if celda52 %}
+                                    {% if celda52.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda52.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda52.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda62 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda62}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda62 %}
+                                    {% if celda62.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda62.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda62.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda72 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda72}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
+                                {% if celda72 %}
+                                    {% if celda72.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda72.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda72.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %} {% if celda82 %}
-                                <td style="background-color:orange; text-align: center;">
-                                    <h1>{{celda82}}</td>
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %} 
+
+                                {% if celda82 %}
+                                    {% if celda82.1 == True %}
+                                        <td style="background-color:green; text-align: center;"><h1>{{celda82.0}}</td>
+                                    {% else %}
+                                        <td style="background-color:orange; text-align: center;"><h1>{{celda82.0}}</td>
+                                    {% endif %}
                                 {% else %}
-                                <td style="background-color:lightslategray;"></td>{% endif %}
+                                    <td style="background-color:lightslategray;"></td>      
+                                {% endif %}
+
                             </tr>
                         </tbody>
                     </table>
