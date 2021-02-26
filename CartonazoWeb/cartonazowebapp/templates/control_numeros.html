@@ -1,29 +1,7 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
-
-<!-- Message 
-<section class="page-section cta">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-9 mx-auto">
-                <div class="cta-inner text-center rounded">
-                    <h2 class="section-heading mb-4">
-                        <span class="section-heading-lower">{{nombre}}, YA ESTAS PARTICIPANDO!!</span>
-                        <span class="section-headin-upper">Te enviamos a {{email}} tu cartonazo, ¡¡SUERTE!!</span>
-                    </h2>
-                    <div class="animate__animated animate__shakeX animate__repeat-3">
-                        <h3 class="section-heading mb-4">
-                            <span class="section-headin-upper"><a class="link " href="#carton">Ver carton</a></span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>-->
-
 <!-- Carton -->
-<section class="page-section cta" id="carton">
+<section class="page-section cta" >
     <div class="container">
         <div class="row">
             <div class="col-xl-9 mx-auto">
@@ -31,7 +9,7 @@
                     <div>
                         <label>Carton: {{Carton_bd}}</label>
                     </div>
-                    <table class="carton table table-responsive">
+                    <table class="carton table table-responsive" id="carton">
                         <tbody>
                             <tr>
                                 {% if celda00 %}
@@ -47,12 +25,12 @@
                                 
                                 {% if celda10 %}
                                     {% if celda10.1 == True %}
-                                        <td style="background-color:green; text-align: center;"><h1>{{celda10.0}}</td>
+                                        <td id="10" style="background-color:green; text-align: center;"><h1>{{celda10.0}}</td>
                                     {% else %}
-                                        <td style="background-color:orange; text-align: center;"><h1>{{celda10.0}}</td>
+                                        <td id="10" style="background-color:orange; text-align: center;"><h1>{{celda10.0}}</td>
                                     {% endif %}
                                 {% else %}
-                                    <td style="background-color:lightslategray;"></td>      
+                                    <td id="10" style="background-color:lightslategray;"></td>      
                                 {% endif %}
 
 
@@ -308,7 +286,6 @@
                                 {% else %}
                                     <td style="background-color:lightslategray;"></td>      
                                 {% endif %}
-
                             </tr>
                         </tbody>
                     </table>
@@ -318,4 +295,9 @@
     </div>
 </section>
 
+
 {% endblock %}
+{% block extrajs %}
+<script src="{% static 'js/carton/index.js' %}"></script>
+{% endblock extrajs %}
+

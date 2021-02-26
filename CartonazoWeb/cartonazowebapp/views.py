@@ -14,12 +14,17 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from usuario.models import Usuario
 from django.contrib.auth.models import User
+import json
+from django.http import JsonResponse
+from django.core.serializers import serialize
+
 
 # Create your views here.
 
 def home(request):
     usuario = request.user.username
     return render(request, 'home.html', {'nombre':usuario})
+
 
 @login_required
 def DescargaCarton(request):
@@ -68,8 +73,16 @@ def registro_usuario(request):
     return render(request, 'registration/registro.html', data)
 
 
+
+def dumper(obj):
+    try:
+        return obj.toJSON()
+    except:
+        return obj.__dict__
+
 @login_required
 def controlar_numeros(request):
+    
     v1 = False
     v2 = False
     v3 = False
@@ -173,6 +186,13 @@ def controlar_numeros(request):
             content.update(dic1)
             content.update(dic2)
             content.update(dic3)
-            content["Carton_bd"] = carton[0]
+            #content["Carton_bd"] = carton[0]
+
+    if request.is_ajax():
+        #json_data = json.dumps(content, indent=2)
+        #json_data = serialize('json', content)
+        json_data = json.dumps(content, default=dumper, indent=2)
+        return JsonResponse(content)
+        #, safe=False)
 
     return render(request, "control_numeros.html", content)

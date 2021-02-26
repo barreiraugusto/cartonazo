@@ -11,7 +11,6 @@
     <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 
      <!-- Fonts -->
-    
      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
      
@@ -21,7 +20,10 @@
 
     <!-- Celular  -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-    
+
+    <!-- JQuery  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -107,8 +109,10 @@
 <!-- Bootstrap -->
 <script src="{% static '/vendor/jquery/jquery.min.js' %}"></script>
 <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
+{% block extrajs %}
+{% endblock extrajs %}
 </body>
 
 
 </html>
+
